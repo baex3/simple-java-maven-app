@@ -6,11 +6,6 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Code Semaphore') {
-            steps {
-                echo 'Job Processing'
-            }
-        }
         stage('Test') {
             steps {
                 sh 'mvn test'
